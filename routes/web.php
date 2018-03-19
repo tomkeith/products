@@ -14,4 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/product/create','ProductController@create'); 
+Route::get('/fruit/create','ProductController@create'); 
+Route::post('/fruit/create','ProductController@store');
+Route::get('/fruit','ProductController@index');
+Route::get('fruit/edit/{id}','ProductController@edit');
+Route::post('fruit/edit/{id}','ProductController@update');
+Route::delete('/fruits/{id}','ProductController@destroy');
