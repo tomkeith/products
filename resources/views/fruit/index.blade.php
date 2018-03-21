@@ -33,6 +33,7 @@
       <td>{{ $fruit['quantity'] }}</td>
       <td>{{ $fruit['price'] }}</td>
       <td>{{ $fruit['discount']}}</td>
+      <td><a href="{{action('ProductController@show',$fruit['id'])}}" class="btn btn-success">Show</a></td>
         <td><a href="{{action('ProductController@edit', $fruit['id'])}}" class="btn btn-warning">Edit</a></td>
         <td>
           <form action="{{action('ProductController@destroy', $fruit['id'])}}" method="post">

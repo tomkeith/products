@@ -20,3 +20,4 @@ Route::get('/fruit','ProductController@index');
 Route::get('fruit/edit/{id}','ProductController@edit');
 Route::post('fruit/edit/{id}','ProductController@update');
 Route::delete('/fruits/{id}','ProductController@destroy');
+Route::get('/fruit/show/{id}','ProductController@show');

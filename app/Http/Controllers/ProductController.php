@@ -44,7 +44,7 @@ class ProductController extends Controller
         
         $fruit->save();
 
-        return redirect('/fruits');
+        return redirect('/fruit');
       }
 
       public function edit($id){
@@ -86,6 +86,11 @@ class ProductController extends Controller
           $fruits = Fruit::find($id);
           $fruits->delete();
           return redirect('/fruit')->with('Success','fruit has been deleted');
+      }
+
+      public function show($id){
+          $fruits=Fruit::find($id);
+          return view ('fruit.show', compact('fruits','id'));
       }
     }
        
